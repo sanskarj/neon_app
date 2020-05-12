@@ -292,19 +292,269 @@ font-family: cursive;
     color: white;
     font-family: cursive;
 }
+     .popup-rows{
+           position: fixed;
+           z-index: 1;
+           height: 100%;
+           width: 100%;
+           background-color: rgba(0, 0, 0, 0.8);
+           top: 0;
+           left: 0;
+           display: none;
+           
+
+     }
+     
+     .popup-column{
+         
+         height: 90%;
+         background-color: white;
+          border-radius: 2rem;
+         position: relative;
+         border-bottom: 2px solid #00acee;
+         padding: 2rem;
+         
+         
+     }
+    
+     .popup-column-skill{
+         
+         height: 60%;
+       
+     }
+     .popup-column-hobbies{
+         height: 50%;
+     }
+     @keyframes appear{
+         0%{
+             top: 0%;
+             left: 50%;
+             transform: translateX(-45%) translateY(-150%);
+
+         }
+         100%{
+             top: 50%;
+             left: 50%;
+             transform: translateX(-45%) translateY(-50%);
+         }
+
+     }
+     @keyframes disappear{
+        0%{
+            top: 50%;
+            left: 50%;
+            transform: translateX(-45%) translateY(-50%);
+
+        }
+        100%{
+            top: 0%;
+            left: 50%;
+            transform: translateX(-45%) translateY(-150%);
+        }
+
+     }
+     ::-webkit-input-placeholder{
+         font-family: cursive;
+     }
+     .form-head-row{
+         height: 5rem;
+     }
+     .edit-head{
+         text-align: center;
+     }
+     .skill-des{
+         height: 2rem;
+         width: 2rem;
+     }
+     .form-head-col{
+         border-bottom: 1px solid black;
+     }
+     .icon-close{
+         height: 1rem;
+         width: 1rem;
+     }
+     .link-close{
+         display: inline;
+         text-decoration: none;
+         color: red;
+     }
+     .form-group{
+         font-weight: 600;
+     }
+     .btn-form-close{
+         background-color: #00acee;
+     }
+
 
 
 
 
   
   </style>
-     <script>
-
-    
-     </script>
+     
     </head>
     <body>
         <div class="container">
+            <div class="row popup-row justify-content-center popup-rows">
+                <div class="popup-column col-11" >
+                  <form action="">
+                   
+                     <div class="row justify-content-around align-items-center form-head-row">
+                         <div class="col-2">
+                            <img class="skill" src="https://img.icons8.com/cute-clipart/64/000000/edit.png"/>
+                         </div>
+                         <div class="col-8 form-head-col">
+                             <h6 class="edit-head">
+                                 Edit your details 
+                                 <a  class="link-close">
+                                    &#10008; 
+                                </a>
+                             </h6>
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label for="name"> <img class="skill" src="https://img.icons8.com/bubbles/64/000000/name.png"/>    Name:</label>
+                         <input type="text" id="name" class="form-control" placeholder="write your name here" required>
+                     </div>
+                     <div class="form-group">
+                        <label for="des"> <img class="skill-des" src="https://img.icons8.com/flat_round/64/000000/info.png"/>
+                            Short Description:</label>
+                        <textarea class="form-control rounded-0" id="des"  rows="10" placeholder="write a short bio here in not more than 50 words" required></textarea>
+                        
+                    </div>
+                   
+                     
+                            <button class="btn btn-primary btn-success  btn-form-close">Update &#8594;</button>
+                       
+                   
+                    
+
+
+                  </form>
+                </div>
+            </div>
+
+            <div class="row popup-row justify-content-center popup-rows popup-row-skill" >
+                <div class="popup-column popup-column-skill col-11" >
+                  <form action="">
+                   
+                     <div class="row justify-content-around align-items-center form-head-row">
+                         <div class="col-2">
+                            <img class="skill-des" src="https://img.icons8.com/cotton/64/000000/laptop-coding.png"/>
+                         </div>
+                         <div class="col-8 form-head-col">
+                             <h6 class="edit-head">
+                                 Add a new skill
+                                 <a  class="link-close">
+                                    &#10008; 
+                                </a>
+                             </h6>
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label for="name"> <img class="skill-des" src="https://img.icons8.com/bubbles/50/000000/edit.png"/>    Name:</label>
+                         <input type="text" id="name" class="form-control" placeholder="which skill u want to add?" required>
+                     </div>
+                     <div class="form-group">
+                        <label for="des"> <img class="skill-des" src="https://img.icons8.com/bubbles/50/000000/development-skill.png"/>
+                            Your Proficiency in %:</label>
+                            <input type="number" class="form-control" required placeholder="eg: 72%">
+                        
+                        
+                    </div>
+                   
+                     
+                            <button class="btn btn-primary btn-success  btn-form-close">Add &#8853;</button>
+                       
+                   
+                    
+
+
+                  </form>
+                </div>
+            </div>
+
+
+
+            <div class="row popup-row popup-row-project justify-content-center popup-rows">
+                <div class="popup-column popup-column-project col-11" >
+                  <form action="">
+                   
+                     <div class="row justify-content-around align-items-center form-head-row">
+                         <div class="col-2">
+                            <img class="skill" src="https://img.icons8.com/dotty/50/000000/project.png"/>
+                         </div>
+                         <div class="col-8 form-head-col">
+                             <h6 class="edit-head">
+                                 Add a project
+                                 <a  class="link-close">
+                                    &#10008; 
+                                </a>
+                             </h6>
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label for="name"> <img class="skill" src="https://img.icons8.com/windows/32/000000/title.png"/>    Title:</label>
+                         <input type="text" id="name" class="form-control" placeholder="your project title..." required>
+                     </div>
+                     <div class="form-group">
+                        <label for="des"> <img class="skill-des" src="https://img.icons8.com/flat_round/64/000000/info.png"/>
+                            Short Description:</label>
+                        <textarea class="form-control rounded-0" id="des"  rows="10" placeholder="write a short description here in not more than 50 words" required></textarea>
+                        
+                    </div>
+                   
+                     
+                            <button class="btn btn-primary btn-success  btn-form-close">Add&#8853; </button>
+                       
+                   
+                    
+
+
+                  </form>
+                </div>
+            </div>
+
+
+            <div class="row popup-row popup-row-hobbies justify-content-center popup-rows">
+                <div class="popup-column popup-column-hobbies col-11" >
+                  <form action="">
+                   
+                     <div class="row justify-content-around align-items-center form-head-row">
+                         <div class="col-2">
+                            <img class="skill-des" src="https://img.icons8.com/color/32/000000/drawing.png"/>
+                         </div>
+                         <div class="col-8 form-head-col">
+                             <h6 class="edit-head">
+                                 Add a hobby
+                                 <a  class="link-close">
+                                    &#10008; 
+                                </a>
+                             </h6>
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label for="name">    Title:</label>
+                         <input type="text" id="name" class="form-control" placeholder="Hobby title..." required>
+                     </div>
+                     
+                   
+                     
+                            <button class="btn btn-primary btn-success  btn-form-close">Add&#8853; </button>
+                       
+                   
+                    
+
+
+                  </form>
+                </div>
+            </div>
+            
+
+
+
+
+
             <div class="row main-row justify-content-center">
                 <div class="col-11 main-col">
                     <div class="row profile-row justify-content-center">
@@ -313,9 +563,7 @@ font-family: cursive;
                     <div class="row profile-row-des justify-content-center">
                         <div class="col-11 head-col">
                             <h6 class="profile-head">Name of the user 
-                                <a href="" class="edit-link">
-                                    <i class="fa fa-edit"></i>
-                                </a>
+                                
                             </h6>
                             
                         </div>
@@ -325,7 +573,9 @@ font-family: cursive;
                         <div class="col-11">
                             <p class="profile-des">
                                  this is a little bio about me. I work in abcd company and i am a software enginner.<a href="">
-                                    <i class="fa fa-edit"></i>
+                                    <a class="edit-link" id="edit-link" >
+                                        <i class="fa fa-edit"></i>
+                                    </a>
                                 </a>
                             </p>
                         </div>
@@ -365,7 +615,7 @@ font-family: cursive;
                             </h6>
                         </div>
                         <div class="col-2">
-                            <a href="">
+                            <a  id="edit-link-1">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </div>
@@ -437,7 +687,7 @@ font-family: cursive;
                             </h6>
                         </div>
                         <div class="col-2">
-                            <a href="">
+                            <a  class="edit-link-2" id="edit-link-2">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </div>
@@ -526,7 +776,7 @@ font-family: cursive;
                                 </h6>
                             </div>
                             <div class="col-2">
-                                <a href="">
+                                <a id="edit-link-3">
                                     <i class="fa fa-edit"></i>
                                 </a>
                             </div>
@@ -564,6 +814,88 @@ font-family: cursive;
            
           
         </div>
+
+        <script>
+            var g1 = document.getElementsByClassName('popup-column')[0];
+            var g2 = document.getElementsByClassName('popup-column')[1];
+            var g3 = document.getElementsByClassName('popup-column')[2];
+            var g4 = document.getElementsByClassName('popup-column')[3];
+           document.getElementById('edit-link').onclick = function(){
+               document.getElementsByClassName('popup-rows')[0].style.display='block';
+              
+               
+               g1.setAttribute("style","animation : appear 1s linear 0s alternate;top:50%;left:50%;transform: translateX(-45%) translateY(-50%)");
+
+                
+
+               
+               
+
+           }
+           document.getElementsByClassName('link-close')[0].onclick=function(){
+            g1.setAttribute("style","animation : disappear 1s linear 0s alternate;top:0%;left:50%;transform: translateX(-45%) translateY(-150%)");
+            setTimeout(function(){
+                document.getElementsByClassName('popup-rows')[0].style.display='none';
+            },1000);
+           }
+           document.getElementById('edit-link-1').onclick = function(){
+            document.getElementsByClassName('popup-rows')[1].style.display='block';
+           
+            
+            g2.setAttribute("style","animation : appear 1s linear 0s alternate;top:50%;left:50%;transform: translateX(-45%) translateY(-50%)");
+
+             
+
+            
+            
+
+        }
+        document.getElementsByClassName('link-close')[1].onclick=function(){
+         g2.setAttribute("style","animation : disappear 1s linear 0s alternate;top:0%;left:50%;transform: translateX(-45%) translateY(-150%)");
+         setTimeout(function(){
+             document.getElementsByClassName('popup-rows')[1].style.display='none';
+         },1000);
+        }
+        document.getElementById('edit-link-2').onclick = function(){
+            document.getElementsByClassName('popup-rows')[2].style.display='block';
+           
+            
+            g3.setAttribute("style","animation : appear 1s linear 0s alternate;top:50%;left:50%;transform: translateX(-45%) translateY(-50%)");
+
+             
+
+            
+            
+
+        }
+        document.getElementsByClassName('link-close')[2].onclick=function(){
+         g3.setAttribute("style","animation : disappear 1s linear 0s alternate;top:0%;left:50%;transform: translateX(-45%) translateY(-150%)");
+         setTimeout(function(){
+             document.getElementsByClassName('popup-rows')[2].style.display='none';
+         },1000);
+        }
+        document.getElementById('edit-link-3').onclick = function(){
+            document.getElementsByClassName('popup-rows')[3].style.display='block';
+           
+            
+            g4.setAttribute("style","animation : appear 1s linear 0s alternate;top:50%;left:50%;transform: translateX(-45%) translateY(-50%)");
+
+             
+
+            
+            
+
+        }
+        document.getElementsByClassName('link-close')[3].onclick=function(){
+         g4.setAttribute("style","animation : disappear 1s linear 0s alternate;top:0%;left:50%;transform: translateX(-45%) translateY(-150%)");
+         setTimeout(function(){
+             document.getElementsByClassName('popup-rows')[3].style.display='none';
+         },1000);
+        }
+
+
+            
+             </script>
     </body>
     <a href="https://icons8.com/icon/103935/development-skill">Development Skill icon by Icons8</a>
 </html>
