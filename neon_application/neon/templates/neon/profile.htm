@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+       
+        
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+        margin: 0rem;
+        padding: 0rem;
+       
+        background-color: rgba(27, 117, 243, 1);
+        
+        
+      }
+      .image-1{
+          height: 7.5rem;
+          width: 7.5rem;
+          border-radius: 50%;
+      }
+      .main-col{
+          background-color: white;
+          border-top-left-radius: 3rem;
+          border-top-right-radius: 3rem;
+          box-shadow: 0 0 5px black;
+      }
+      .main-row{
+          height: 150rem;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          
+          
+      }
+      .profile-head{
+          font-size: 1.2rem;
+      }
+      .profile-row{
+          margin: 1.5rem;
+      }
+      .image-1{
+        box-shadow: 0 0 5px black;
+      }
+      .profile-row-des{
+          margin: 1rem;
+      }
+     .profile-head,.profile-des{
+         text-align: center;
+         font-family: cursive;
+
+     }
+     .head-col{
+         border-bottom: 1px solid black;
+     }
+     .view-more-row{
+         margin-top: -1.5rem;
+     }
+     .link{
+         color: rgb(0, 48, 116);
+     }
+     .share-link{
+         display: block;
+         
+         height: 2rem;
+         width: 2rem;
+         text-align: center;
+        border-radius: 50%;
+
+     }
+     .fa{
+         margin-top: 0.5rem;
+         color: white;
+     }
+     .fb{
+        background-color: #3b5998;
+     }
+     .wa{
+         background-color: #25D366;
+     }
+     .tw{
+         background-color:  #00acee;
+     }
+     .in{
+         background-color:  #405DE6;
+     }
+     .qu{
+         background-color: #B92B27;
+     }
+
+    .lin{
+        background-color:#0e76a8 ;
+    }
+    .share-row{
+        margin-right: 3rem;
+    }
+    
+     .share-head{
+         text-align: center;
+         font-family: cursive;
+        
+         padding-bottom: 0.4rem;
+         border-bottom: 1px solid black;
+     }
+    .line-col{
+        border-bottom: 1px solid black;
+    }
+    .share-me-row{
+        margin-top: 1rem;
+       
+    }
+    .fa-share{
+        color: #00acee;
+    }
+    .skills-row{
+        height: 4rem;
+        
+    }
+    .skill-head{
+        text-align: center;
+    }
+    .skill{
+        height: 2.8rem;
+        width: 2.8rem;
+    }
+    .skill-col{
+        border-bottom: 1px solid black;
+    }
+   .skill-des-row{
+       margin-top: 1rem;
+       margin-bottom: 1rem;
+   }
+   .skill-bar{
+       height: 0.7rem;
+       background: #1488CC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   }
+   @import url("https://fonts.googleapis.com/css?family=Mukta:700");
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+button.learn-more .circle {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: rgba(27, 117, 243, 1);
+  border-radius: 1.625rem;
+}
+button.learn-more .circle .icon {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+button.learn-more .circle .icon.arrow {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: '';
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+button.learn-more .button-text {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: rgba(27, 117, 243, 1);
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+button:hover .circle {
+  width: 100%;
+}
+button:hover .circle .icon.arrow {
+  background: #fff;
+  -webkit-transform: translate(1rem, 0);
+          transform: translate(1rem, 0);
+}
+button:hover .button-text {
+  color: #fff;
+}
+.line-column{
+    border-bottom: 1px solid black;
+    margin-top: 1rem;
+}
+.fa-edit{
+    color: blue;
+}
+.project-des,.title-head{
+    text-align: center;
+}
+.project{
+    padding: 1rem;
+    
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    box-shadow: 0 0 5px black;
+    border-bottom: 1.4px solid rgb(5, 17, 129);
+    margin-bottom: 2rem;
+    background: #2193b0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: white;
+font-family: cursive;
+
+
+}
+.project-row{
+    margin: 1rem;
+}
+.projects-row{
+    margin-bottom: 1rem;
+}
+.title-col{
+    border-bottom: 1px solid black;
+}
+.line-col{
+    margin-top: 1rem;
+}
+.hobby-para{
+    text-align: center;
+    margin-top: 0.8rem;
+}
+.hobby-column{
+    height:3rem;
+   
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    border: 1px solid white;
+    background-color: #00acee;
+    
+    color: white;
+    font-family: cursive;
+}
+
+
+
+
+  
+  </style>
+     <script>
+
+    
+     </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row main-row justify-content-center">
+                <div class="col-11 main-col">
+                    <div class="row profile-row justify-content-center">
+                         <div class="col-xs-5"><img src="https://image.shutterstock.com/image-photo/portrait-smiling-red-haired-millennial-260nw-1194497251.jpg" alt="" class="image-1"></div>
+                    </div>
+                    <div class="row profile-row-des justify-content-center">
+                        <div class="col-11 head-col">
+                            <h6 class="profile-head">Name of the user 
+                                <a href="" class="edit-link">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                            </h6>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="row profile-row-des justify-content-center">
+                        <div class="col-11">
+                            <p class="profile-des">
+                                 this is a little bio about me. I work in abcd company and i am a software enginner.<a href="">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row profile-row-des view-more-row justify-content-center">
+                        <div class="col-6 button-col">
+                             <a href="" class="link">view more&#8594; </a>
+                            
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-10 line-col"></div>
+                    </div>
+                    <div class="row justify-content-center share-me-row">
+                        <div class="col-7">
+                            <h6 class="share-head">
+                                &#8592;   share me <i class="fa fa-share"></i> &#8594;
+                            </h6>
+                        </div>
+                    </div>
+                   
+                    <div class="row profile-row-des share-row justify-content-around">
+                       <div class="col-1"><a href="" class="share-link fb"><i class="fa fa-facebook"></i></a></div>
+                       <div class="col-1"><a href="" class="share-link wa"><i class="fa fa-whatsapp"></i></a></div>
+                       <div class="col-1"><a href="" class="share-link tw"><i class="fa fa-twitter"></i></a></div>
+                       <div class="col-1"><a href="" class="share-link in"><i class="fa fa-instagram"></i></a></div>
+                       <div class="col-1"><a href="" class="share-link qu"><i class="fa fa-quora"></i></a></div>
+                       <div class="col-1"><a href="" class="share-link lin"><i class="fa fa-linkedin"></i></a></div>
+                    </div>
+                    <div class="row justify-content-center skills-row align-items-center">
+                        <div class="col-2">
+                            <img src="https://img.icons8.com/color/48/000000/development-skill.png" class="skill">
+                        </div>
+                        <div class="col-5 skill-col">
+                            <h6 class="skill-head">
+                                &#8592;   skill sets  &#8594;
+                            </h6>
+                        </div>
+                        <div class="col-2">
+                            <a href="">
+                                <i class="fa fa-edit"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="skill-set">
+                          <div class="row justify-content-around skill-des-row align-items-center">
+                              <div class="col-2"><img class="skill" src="https://img.icons8.com/color/48/000000/html-5.png"/></div>
+                              <div class="col-7 skill-bar"></div>
+                              <div class="col-2">
+                                  <p class="percent"> 90%</p>
+                              </div>
+                          </div>
+                          <div class="row justify-content-around skill-des-row align-items-center">
+                              <div class="col-2"><img src="https://img.icons8.com/color/48/000000/css-filetype.png"/></div>
+                              <div class="col-7 skill-bar"></div>
+                              <div class="col-2">
+                                  <p class="percent"> 90%</p>
+                              </div>
+                          </div>
+                          <div class="row justify-content-around skill-des-row align-items-center">
+                              <div class="col-2"><img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png"/></div>
+                              <div class="col-7 skill-bar"></div>
+                              <div class="col-2">
+                                  <p class="percent"> 90%</p>
+                              </div>
+                          </div>
+                          <div class="row justify-content-around skill-des-row align-items-center">
+                              <div class="col-2"><img src="https://img.icons8.com/color/48/000000/javascript.png"/></div>
+                              <div class="col-7 skill-bar"></div>
+                              <div class="col-2">
+                                  <p class="percent"> 90%</p>
+                              </div>
+                          </div>
+                          <div class="row justify-content-around skill-des-row align-items-center">
+                              <div class="col-2"><img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"/></div>
+                              <div class="col-7 skill-bar"></div>
+                              <div class="col-2">
+                                  <p class="percent"> 90%</p>
+                              </div>
+                          </div>
+                          <div class="row justify-content-around skill-des-row align-items-center">
+                              <div class="col-2"><img src="https://img.icons8.com/color/48/000000/python.png"/></div>
+                              <div class="col-7 skill-bar"></div>
+                              <div class="col-2">
+                                  <p class="percent"> 90%</p>
+                              </div>
+                          </div>
+                          <div class="row justify-content-center">
+                              <div class="col-7">
+                                <button class="learn-more">
+                                    <span class="circle" aria-hidden="true">
+                                      <span class="icon arrow"></span>
+                                    </span>
+                                    <span class="button-text">View More</span>
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="row justify-content-center">
+                              <div class="col-10 line-column"></div>
+                          </div>
+                    </div>
+                    <div class="row justify-content-center skills-row align-items-center projects-row">
+                        <div class="col-2">
+                            <img class="skill" src="https://img.icons8.com/color/48/000000/hard-working.png"/>
+                        </div>
+                        <div class="col-5 skill-col">
+                            <h6 class="skill-head">
+                                &#8592; Projects    &#8594;
+                            </h6>
+                        </div>
+                        <div class="col-2">
+                            <a href="">
+                                <i class="fa fa-edit"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="projects">
+                        <div class="project">
+                          <div class="row project-row justify-content-center">
+                              <div class="col-12 title-col">
+                                  <h6 class="title-head">Title of the project</h6>
+                              </div>
+
+                          </div>
+                          <div class="row project-row justify-content-center">
+                              <div class="col-12">
+                                  <p class="project-des">here is the description of the project. these are the skills used. the project aimss to solve the following real world problem</p>
+                              </div>
+                          </div>
+                          <div class="row project-row justify-content-center">
+                              <div class="col-5">
+                                  <div class="btn btn-secondary">Details&#8594; </div>
+                              </div>
+                          </div>
+                          </div>
+                          <div class="project">
+                            <div class="row project-row justify-content-center">
+                                <div class="col-12 title-col">
+                                    <h6 class="title-head">Title of the project</h6>
+                                </div>
+  
+                            </div>
+                            <div class="row project-row justify-content-center">
+                                <div class="col-12">
+                                    <p class="project-des">here is the description of the project. these are the skills used. the project aimss to solve the following real world problem</p>
+                                </div>
+                            </div>
+                            <div class="row project-row justify-content-center">
+                                <div class="col-5">
+                                    <div class="btn btn-secondary">Details&#8594; </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="project">
+                                <div class="row project-row justify-content-center">
+                                    <div class="col-12 title-col">
+                                        <h6 class="title-head">Title of the project</h6>
+                                    </div>
+      
+                                </div>
+                                <div class="row project-row justify-content-center">
+                                    <div class="col-12">
+                                        <p class="project-des">here is the description of the project. these are the skills used. the project aimss to solve the following real world problem</p>
+                                    </div>
+                                </div>
+                                <div class="row project-row justify-content-center">
+                                    <div class="col-5">
+                                        <div class="btn btn-secondary">Details&#8594; </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-7">
+                                      <button class="learn-more">
+                                          <span class="circle" aria-hidden="true">
+                                            <span class="icon arrow"></span>
+                                          </span>
+                                          <span class="button-text">View More</span>
+                                        </button>
+                                    </div>
+                                </div>
+                               
+                                
+                                   
+                    </div>
+                    
+                    <div class="row justify-content-center">
+                        <div class="col-10 line-col"></div>
+                    </div>
+                    <div class="hobbies">
+                        <div class="row justify-content-center skills-row align-items-center projects-row">
+                            <div class="col-2">
+                                <img class="skill" src="https://img.icons8.com/nolan/64/drawing.png"/>
+                            </div>
+                            <div class="col-5 skill-col">
+                                <h6 class="skill-head">
+                                    &#8592; Hobbies    &#8594;
+                                </h6>
+                            </div>
+                            <div class="col-2">
+                                <a href="">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row justify-content-around">
+                           <div class="col-4 hobby-column">
+                               <p class="hobby-para">Swimming</p>
+                           </div>
+                           <div class="col-3 hobby-column">
+                               <p class="hobby-para">Reading</p>
+                           </div>
+                           <div class="col-3 hobby-column">
+                               <p class="hobby-para">Cooking</p>
+                           </div>
+                        </div>
+                        <div class="row justify-content-around">
+                            <div class="col-3 hobby-column">
+                                <p class="hobby-para">Singing</p>
+                            </div>
+                            <div class="col-3 hobby-column">
+                                <p class="hobby-para">Dancing</p>
+                            </div>
+                            <div class="col-4 hobby-column">
+                                <p class="hobby-para">Travelling</p>
+                            </div>
+                         </div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+            
+            
+           
+          
+        </div>
+    </body>
+    <a href="https://icons8.com/icon/103935/development-skill">Development Skill icon by Icons8</a>
+</html>
