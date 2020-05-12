@@ -1,0 +1,205 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Bootstrap 4 Introduction</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+        
+    <style type="">
+        .main-form {
+        width: 450px;
+        margin: auto;
+            }
+        .navbar {
+            background-color: #1BB7F2;
+            }
+        .navbar-brand{
+            color:white;
+            }
+        .nav-link{
+            padding-left: ;
+            color:white;
+            }
+</style>
+
+    </head>
+
+  <body >
+        <nav class="navbar navbar-expand-sm navbar">
+            <a href="#" class="navbar-brand">Neon</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span> 
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Back</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                    </li>
+                </ul>
+            </div>
+            
+           </nav>
+
+         
+
+<!--        <form action="" class="main-form needs-validation" novalidate>-->
+        <form class="main-form needs-validation" method="post" action="/experience_form/">
+                 {% csrf_token %}
+<!--
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="firstname">Firstname</label>
+                        <input type="text" name="firstname" id="firstname" class="form-control is-invalid">
+                        <div class="invalid-feedback">Looks good!</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="lastname">Lastname</label>
+                        <input type="text" name="lastname" id="lastname" class="form-control">
+                        <small class="form-text text-muted">
+                            This should be your last name.
+                        </small>
+                    </div>
+                </div>
+            </div>
+-->
+            <div class="form-group">
+                <label for="username">Title</label>
+                <input type="text" name="experience_title" id="username" class="form-control" required>
+                
+                <div class="invalid-feedback">Please enter a valid title.</div>
+            </div>
+<!--
+            <div class="form-group">
+                <label for="username">Employment-Type</label>
+                <input type="text" name="username" id="username" class="form-control" required>
+                <div class="invalid-feedback">Please enter a valid username.</div>
+            </div>
+-->
+            <div class="form-group">
+                <label for="experience_employment_type">Employment-Type</label>
+                <select name="experience_employment_type" id="employment" class="form-control">
+                    <option value="female">-</option>
+
+                    <option value="Full Time">Full Time</option>
+                    <option value="Part Time">Part Time</option>
+                    <option value="Internship">Internship</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" name="experience_company" id="username" class="form-control" required>
+                
+                <div class="invalid-feedback">Please enter a valid title.</div>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" name="experience_location" id="username" class="form-control" required>
+                
+                <div class="invalid-feedback">Please enter a valid title.</div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-3 mb-3">
+                 <label for="experience_startmonth">Start Month</label>
+                <select name="experience_startmonth" id="employment" class="form-control">
+                    <option value="female">-</option>
+
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                </select>
+                </div>  
+                
+                 <div class="col-md-3 mb-3">
+                 <label for="experience_startdate">Year</label>
+                <select name="experience_startdate" id="employment" class="form-control">
+                    <option value="female">-</option>
+
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                 <label for="experience_endmonth">End Month</label>
+                <select name="experience_endmonth" id="employment" class="form-control">
+                    <option value="female">-</option>
+
+                    <option value="January">Jan</option>
+                    <option value="February">Feb</option>
+                    <option value="March">March</option>
+                </select>
+                </div>  
+                
+                 <div class="col-md-3 mb-3">
+                 <label for="experience_startdate">Year</label>
+                <select name="experience_enddate" id="employment" class="form-control">
+                    <option value="female">-</option>
+
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="experience_description">Description</label>
+                <textarea name="experience_description" class="form-control" id="experience_description" rows="5"></textarea>
+              </div>
+ 
+   
+<!--
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control">
+            </div>
+-->
+<!--
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender" class="form-control">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+-->
+<!--
+            <div class="form-check">
+                <input type="checkbox" id="accept-terms" class="form-check-input">
+                <label for="accept-terms" class="form-check-label">Accept Terms &amp; Conditions</label>
+            </div>
+-->
+            <button type="Save" class="btn btn-primary">Save</button>
+        </form>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+        <script>
+            var form = document.querySelector('.needs-validation');
+
+            form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            })
+        </script>
+    </body>
+      
+
+    </html>
