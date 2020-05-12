@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Bootstrap 4 Introduction</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+                <div class="row popup-row justify-content-center popup-rows popup-row-skill" >
+                <div class="popup-column popup-column-skill col-11" >
+                  <form action="http://127.0.0.1:8000/profile/add_skill_form_submit/" method="post">
+                    {% csrf_token %}
+                   
+                     <div class="row justify-content-around align-items-center form-head-row">
+                         <div class="col-2">
+                            <img class="skill-des" src="https://img.icons8.com/cotton/64/000000/laptop-coding.png"/>
+                         </div>
+                         <div class="col-8 form-head-col">
+                             <h6 class="edit-head">
+                                 Add a new skill
+                                 <a  class="link-close">
+                                    &#10008; 
+                                </a>
+                             </h6>
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <label for="name"> <img class="skill-des" src="https://img.icons8.com/bubbles/50/000000/edit.png"/>    Name:</label>
+                         <input type="text" name="skill_name" class="form-control" placeholder="which skill u want to add?" required>
+                     </div>
+                     <div class="form-group">
+                        <label for="des"> <img class="skill-des" src="https://img.icons8.com/bubbles/50/000000/development-skill.png"/>
+                            Your Proficiency in %:</label>
+                            <input type="number" name="skill_score" class="form-control" required placeholder="eg: 72%">
+                        
+                        
+                    </div>
+                   
+                     
+                            <button class="btn btn-primary btn-success  btn-form-close">Add &#8853;</button>
+                       
+                   
+                    
+
+
+                  </form>
+                </div>
+            </div>
+        </body>
+        </html>
+       

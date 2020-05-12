@@ -313,7 +313,7 @@ font-family: cursive;
                     <div class="row profile-row-des justify-content-center">
                         <div class="col-11 head-col">
                             <h6 class="profile-head">Name of the user 
-                                <a href="" class="edit-link">
+                                <a href="/change_name/" class="edit-link">
                                     <i class="fa fa-edit"></i>
                                 </a>
                             </h6>
@@ -365,20 +365,23 @@ font-family: cursive;
                             </h6>
                         </div>
                         <div class="col-2">
-                            <a href="">
+                            <a href="add_skill/">
                                 <i class="fa fa-edit"></i>
                             </a>
                         </div>
                     </div>
                     <div class="skill-set">
+                    {%for skill in Skills%}
                           <div class="row justify-content-around skill-des-row align-items-center">
-                              <div class="col-2"><img class="skill" src="https://img.icons8.com/color/48/000000/html-5.png"/></div>
+                              <div class="col-2">{{skill.skill_name}}</div>
                               <div class="col-7 skill-bar"></div>
                               <div class="col-2">
-                                  <p class="percent"> 90%</p>
+                                  <p class="percent"> {{skill.skill_score}}%</p>
                               </div>
+
                           </div>
-                          <div class="row justify-content-around skill-des-row align-items-center">
+                      {%endfor%}
+                         <!-- <div class="row justify-content-around skill-des-row align-items-center">
                               <div class="col-2"><img src="https://img.icons8.com/color/48/000000/css-filetype.png"/></div>
                               <div class="col-7 skill-bar"></div>
                               <div class="col-2">
@@ -412,7 +415,8 @@ font-family: cursive;
                               <div class="col-2">
                                   <p class="percent"> 90%</p>
                               </div>
-                          </div>
+                          </div>     
+                        -->
                           <div class="row justify-content-center">
                               <div class="col-7">
                                 <button class="learn-more">
