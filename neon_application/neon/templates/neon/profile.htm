@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load socialaccount %}
 
 <html lang="en">
     <head>
@@ -312,7 +313,11 @@ font-family: cursive;
                     </div>
                     <div class="row profile-row-des justify-content-center">
                         <div class="col-11 head-col">
-                            <h6 class="profile-head">Name of the user 
+                        {%if user.is_authenticated%}
+                            <h6 class="profile-head">{{user.username}} 
+                        {%else%}
+                            <a href="{% provider_login_url 'google' %}">Login with Google</a>
+                        {% endif %}
                                 <a href="/change_name/" class="edit-link">
                                     <i class="fa fa-edit"></i>
                                 </a>

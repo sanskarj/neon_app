@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path,include
 from neon import views
 
+
 urlpatterns = [
     
     path('',views.loginpage,name="loginpage"),
    
     path('profile/',include('neon.urls')),
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
 ]
