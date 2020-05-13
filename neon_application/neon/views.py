@@ -21,5 +21,5 @@ def add_skill_form_submit(request):
     skill_info.save()
     print(skill_info.skill_name)
     print(skill_info.skill_score)
-    return render(request,'neon/profile.htm')
+    return render(request,'neon/add_skill.htm')
 
